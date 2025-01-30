@@ -35,9 +35,57 @@
     );
     return false;
   });
-  //Hero section
- 
-  
+  ////swiper product
+    var swiperProduct = new Swiper(".mySwiper.product", {
+      slidesPerView: 1.25,
+      spaceBetween: 24,
+      loop: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.25,
+        },
+        400: {
+          slidesPerView: 1.5,
+        },
+        880: {
+          slidesPerView: 2,
+        },
+        1025: {
+          slidesPerView: 3,
+        },
+        1366: {
+          slidesPerView: 3.75,
+        },
+      },
+    });
+  ///Swiper certificate
+  var swiperCertificate = new Swiper(".mySwiper.certificate", {
+    slidesPerView: 1.5,
+    spaceBetween: 24,
+    loop: true,
+    // autoplay: {
+    //   delay: 0,
+    //   disableOnInteraction: false,
+    // },
+    // speed:2000,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.5,
+      },
+      400: {
+        slidesPerView: 1.5,
+      },
+      880: {
+        slidesPerView: 3,
+      },
+      1025: {
+        slidesPerView: 4.5,
+      },
+      1366: {
+        slidesPerView: 5.25,
+      },
+    },
+  });
 })(jQuery);
 /*=====Header=====*/
 const menu = document.querySelector(".menu");

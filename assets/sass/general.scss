@@ -130,7 +130,10 @@ h6 {
     color: inherit;
     border-color: transparent;
 }
-
+input{
+    box-shadow: unset !important;
+    outline: 0 !important;
+}
 /*-----------------------
     Global Styles
 -------------------------*/
@@ -156,8 +159,18 @@ h6 {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
+   text-overflow: ellipsis;
 }
+.title-section{
+    h2{
+        text-transform: capitalize;
+        font-family: $font-family-SemiBold;
+    }  
+    .title-line{
+        background:  map_get($theme-colors, primary);
+        height: 1.25px;
+    }
+} 
 /*-----------------------
     preloader 
 -------------------------*/
@@ -280,16 +293,19 @@ $breakpoint: 992px;
     margin: 0 auto;
     background-color: map_get($theme-colors, primary);
 }
-
 .brand {
     display: flex;
     align-items: center;
-
     img {
-        height: 55px;
+        
+        @media (min-width: 1440px){
+            height: 80px;
+        }
+        @media (max-width: 1439.98px){
+            height: 70px;
+        }
     }
 }
-
 .mobile-screen {
     display: none !important;
 
@@ -297,7 +313,6 @@ $breakpoint: 992px;
         display: flex !important;
     }
 }
-
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -329,35 +344,34 @@ $breakpoint: 992px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        column-gap: 1rem;
-
+        @media (min-width: ($breakpoint)) {
+            gap: 2rem;
+        }
         @media (max-width: ($breakpoint - 1)) {
             display: none;
         }
-
-        .btn-order {
-            padding: 11px 14px;
-            border: 1.5px solid #fff;
-            font-size: 14px;
-            border-radius: 30px;
+        .btn-dark {
+           padding:  0.44rem;
+            min-height: 1.5rem;
+            font-size: 0.875rem;
+            border-radius: 0.5rem;
             color: #fff;
-            font-family: $font-family-Bold;
+            background: map_get($theme-colors, dark);
+            text-transform: capitalize;
+            font-family: $font-family-SemiBold;
         }
 
         .btn-language {
             padding: 0;
-            font-size: 15px;
-            color: #000;
-            font-weight: 700;
-
+            font-size: 16px;
+            color: #fff;
+            font-family: $font-family-SemiBold;
             img {
                 width: 17px;
-                filter: map-get($filter-colors, primary);
             }
         }
     }
 }
-
 .menu {
     @media (max-width: ($breakpoint - 1)) {
         position: fixed;
@@ -531,7 +545,6 @@ $breakpoint: 992px;
         }
     }
 }
-
 .submenu {
     position: absolute;
     z-index: 100;
@@ -647,7 +660,6 @@ $breakpoint: 992px;
         }
     }
 }
-
 .overlay {
     position: fixed;
     display: block;
@@ -671,7 +683,6 @@ $breakpoint: 992px;
         }
     }
 }
-
 .burger {
     position: relative;
     display: none;
@@ -739,13 +750,11 @@ button.back-to-top {
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
-
 button.back-to-top:hover,
 button.back-to-top:active,
 button.back-to-top:focus {
     outline: 0 !important;
 }
-
 button.back-to-top::before,
 button.back-to-top::after {
     content: "";
@@ -760,18 +769,15 @@ button.back-to-top::after {
     border-radius: 20px;
     visibility: hidden;
 }
-
 button.back-to-top.show::after,
 button.back-to-top.show::before {
     visibility: visible;
 }
-
 button.back-to-top::after {
     border-bottom-color: #fff;
     position: relative;
     top: -24px;
 }
-
 button.back-to-top.show {
     display: block;
     background: #fff;
@@ -786,36 +792,280 @@ button.back-to-top.show {
     -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
 }
-
 button.back-to-top.show:active {
     box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
 }
 /*-----------------------
-    header Styles
+    Footer Styles
 -------------------------*/
+footer{
+    padding: 45px 0;
+    background: map_get($theme-colors, primary);
+    
+    .footer-col{
+        .footer-logo{
+            .brand{
+                img{
+                    height: 90px;
+                }
+            }
+            p{
+                font-size: 1rem;
+                color: #fff;
+            }
+        }
+        .footer-subtitle{
+            color: #fff;
+            margin-bottom: 2rem;
+            text-transform: capitalize;
+            font-family: $font-family-SemiBold;
+        }
+        .footer-links{
+           ul{
+            row-gap: 0.88rem;
+            li{
+                a{
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                    color: map_get($theme-colors, white-normal);
+
+                }
+                &:hover{
+                   a{
+                    color: #fff;
+                   }
+                }
+            }
+           }
+            
+        }
+        .footer-contat{
+            .item{
+                span,a{
+                    font-size: 1rem;
+                    color: map_get($theme-colors, white-normal);
+                }
+                &:not(:last-child){
+                    margin-bottom: 1.12rem;
+                }
+            }
+        }
+    }
+   
+}
 /*-----------------------
-    header Styles
+    subscribe-section
 -------------------------*/
+.subscribe-section{
+    color: #fff;
+    background: map_get($theme-colors, dark);
+    padding: 1rem 0;
+    &-info{
+        column-gap: 4rem;
+        row-gap: 1rem;
+        p{
+            font-family: $font-family-medium;
+            @media (min-width: 1400px){
+                font-size: 1.5rem;
+            }
+            @media (max-width: 1399.98px){
+                font-size: 1.4rem;
+            }
+        }
+        span{
+            font-size: 1rem;
+        }
+    }
+    .input-group{
+        min-height: 3rem;
+        .form-control{
+            border-radius: 0;
+            border-color: #fff;
+            border: 0;
+            @media (min-width: 992px){
+                width: calc(100% - 10rem);
+            }
+            @media (max-width: 991.98px){
+                width: calc(100% - 10rem);
+            }
+            &::placeholder {
+                color: map_get($theme-colors, grey-light);
+                opacity: 1;
+                @media (min-width: 992px){
+                    font-size: 1rem;
+                }
+                @media (max-width: 991.98px){
+                    font-size: 0.894rem;
+                }
+
+            }
+              
+            &::-ms-input-placeholder {
+                color: map_get($theme-colors, grey-light);
+                opacity: 1;
+                @media (min-width: 992px){
+                    font-size: 1rem;
+                }
+                @media (max-width: 991.98px){
+                    font-size: 0.894rem;
+                }
+            }
+        }
+        .btn{
+            color: map_get($theme-colors, grey-dark);
+            text-transform: uppercase;
+            font-family: $font-family-SemiBold;
+            border-radius: 0;
+            @media (min-width: 992px){
+                min-width: 10rem;
+                font-size: 1rem;
+            }
+            @media (max-width: 991.98px){
+                min-width: 5rem;
+                font-size: 0.894rem;
+            }
+           
+        }
+    }
+}
 /*-----------------------
-    header Styles
+   equipment
 -------------------------*/
+.equipment-section{
+    padding: 5rem 0;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    p{
+        @media (min-width: 992px){
+            font-size: 2.5rem;
+        }
+        @media (max-width: 991.98px){
+            font-size: 1.5rem;
+        }
+        color: map_get($theme-colors, dark);
+        font-family: $font-family-SemiBold;
+    }
+}
 /*-----------------------
-    header Styles
+    certificates-section
 -------------------------*/
+.certificates-section{
+    padding: 70px 0;
+    .certificate-box{
+        border-radius: 8px;
+        border: 1px solid #D1D5DB;
+        height: 195px;
+        img{
+            width: 150px;
+            margin: 0 auto;
+        }
+    }
+}
 /*-----------------------
-    header Styles
+    latest-news
 -------------------------*/
+.latest-news{
+    padding: 70px 0;
+    .news-card{
+        border-radius: 1rem;
+        &-header{
+            height: 280px;
+            img{
+                object-fit: cover;
+            }
+        }
+        &-body{
+            padding: 0.76rem;
+            background: rgba(233, 233, 233, 0.34);
+            ul{
+                li{
+                    span{
+                        color: map_get($theme-colors, dark);
+                    }
+                }
+            }
+            h3{
+                text-transform: uppercase;
+                font-family: $font-family-SemiBold;
+                a{
+                    color: map_get($theme-colors, dark);  
+                }
+                @media (min-width: 992px){
+                    font-size: 1.5rem;
+                }
+                @media (max-width: 991.98px){
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
 /*-----------------------
-    header Styles
+    our-product
 -------------------------*/
+.our-product{
+    padding: 70px 0;
+    .our-product-card{
+        .header-part{
+            height: 350px;
+            img{
+                display: block;
+                margin: 0 auto;
+                height: 250px;
+            }
+        }
+        .body-part{
+            h5{
+                text-transform: uppercase;
+                color: map_get($theme-colors, dark);
+                font-family: $font-family-SemiBold;
+            }
+            p{
+                font-size: 0.984rem;
+                color: #595959;
+            }
+        }
+    }
+}
 /*-----------------------
-    header Styles
+    ready-section
 -------------------------*/
+.ready-section{
+    padding: 2rem 0;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    h3{
+        color: map_get($theme-colors, grey-dark);
+        font-family: $font-family-Bold;
+    }
+    p{
+        color: map_get($theme-colors, grey-dark);
+    }
+    .btn-contat{
+        min-height: 3.25rem;
+        border-radius: 0.5rem;
+        background: #FFF;
+        font-size: 0.95625rem;
+        font-family: $font-family-SemiBold;
+        @media (min-width: 768px){
+            min-width: 12rem;
+        }
+        @media (max-width: 767.98px){
+            min-width: 100%;
+        }
+    }
+}
 /*-----------------------
-    header Styles
+    best-seller
 -------------------------*/
+.best-seller
+{
+    padding: 70px 0;
+}
 /*-----------------------
     header Styles
 -------------------------*/
