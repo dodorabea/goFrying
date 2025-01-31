@@ -8,11 +8,9 @@
       $loader.remove();
     });
   };
-
   /*====Back to top==== */
   var amountScrolled = 200;
   var amountScrolledNav = 25;
-
   $(window).scroll(function () {
     if ($(window).scrollTop() > amountScrolled) {
       $("button.back-to-top").addClass("show");
