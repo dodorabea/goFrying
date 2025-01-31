@@ -8,12 +8,7 @@
       $loader.remove();
     });
   };
-  /*====AOS==== */
-  AOS.init({
-    duration: 900,
-    easing: "ease-in-cubic",
-    disable: "mobile",
-  });
+
   /*====Back to top==== */
   var amountScrolled = 200;
   var amountScrolledNav = 25;
@@ -35,29 +30,70 @@
     );
     return false;
   });
-  ////swiper product
-    var swiperProduct = new Swiper(".mySwiper.product", {
-      slidesPerView: 1.25,
-      spaceBetween: 24,
-      loop: true,
-      breakpoints: {
-        0: {
-          slidesPerView: 1.25,
-        },
-        400: {
-          slidesPerView: 1.5,
-        },
-        880: {
-          slidesPerView: 2,
-        },
-        1025: {
-          slidesPerView: 3,
-        },
-        1366: {
-          slidesPerView: 3.75,
-        },
+  ////category
+  var swiperCategory = new Swiper(".mySwiper.category", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.25,
       },
-    });
+      400: {
+        slidesPerView: 1.5,
+      },
+      880: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 3,
+      },
+      1366: {
+        slidesPerView: 4,
+      },
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  ////
+  var swiperFade = new Swiper(".swiperFade", {
+    effect: "fade",
+    loop: true,
+    speed: 1000,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+  ////swiper product
+  var swiperProduct = new Swiper(".mySwiper.product", {
+    slidesPerView: 1.25,
+    spaceBetween: 24,
+    loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.25,
+      },
+      400: {
+        slidesPerView: 1.5,
+      },
+      880: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 3,
+      },
+      1366: {
+        slidesPerView: 3.75,
+      },
+    },
+  });
   ///Swiper certificate
   var swiperCertificate = new Swiper(".mySwiper.certificate", {
     slidesPerView: 1.5,

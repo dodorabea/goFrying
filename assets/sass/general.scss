@@ -17,7 +17,7 @@ $font-family-Bold: 'Montserrat-Bold',
 -------------------------*/
 ::selection {
     background: map_get($theme-colors, dark);
-    color: map_get($theme-colors, white);
+    color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -34,7 +34,6 @@ $font-family-Bold: 'Montserrat-Bold',
 }
 
 html {
-    height: 100%;
     -webkit-text-size-adjust: 100%;
     line-height: 1.15;
     scroll-behavior: initial;
@@ -171,6 +170,21 @@ input{
         height: 1.25px;
     }
 } 
+.swiper-pagination{
+    padding-top: 3rem;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    &-active {
+        background: map_get($theme-colors, primary);
+    }
+    background: #737373;
+    opacity: 1;
+}
 /*-----------------------
     preloader 
 -------------------------*/
@@ -805,6 +819,12 @@ footer{
     background: map_get($theme-colors, primary);
     
     .footer-col{
+        &-links{
+            @media (min-width: 992px){
+                justify-content: center;
+            }
+           
+        }
         .footer-logo{
             .brand{
                 img{
@@ -938,6 +958,8 @@ footer{
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
+    object-fit: cover !important;
+    background-attachment: fixed !important;
     p{
         @media (min-width: 992px){
             font-size: 2.5rem;
@@ -1038,6 +1060,8 @@ footer{
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
+    object-fit: cover !important;
+    background-attachment: fixed !important;
     h3{
         color: map_get($theme-colors, grey-dark);
         font-family: $font-family-Bold;
@@ -1066,9 +1090,55 @@ footer{
 {
     padding: 70px 0;
 }
+.best-seller-card{
+    .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after,
+    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+      content: unset;
+    }
+    .card-image{
+        height: 390px;
+        img{
+            object-fit: cover;
+        }
+    }
+    .with-hover{
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
+    &:hover{
+        .with-hover{
+            opacity: 1;
+        }  
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        left: var(--swiper-navigation-sides-offset, 16px);
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: var(--swiper-navigation-sides-offset, 16px);
+    }
+}
+
 /*-----------------------
-    header Styles
+    popular-category
 -------------------------*/
+.popular-category{
+    padding: 70px 0;
+}
+.popular-category-box{
+    .header-part{
+        height: 350px;
+        img{
+            height: 282px;
+        }
+    }
+    .body-part{
+        h4,a{
+            color: map_get($theme-colors, dark);
+            font-family: $font-family-medium;
+        }
+    }
+}
 /*-----------------------
     header Styles
 -------------------------*/
