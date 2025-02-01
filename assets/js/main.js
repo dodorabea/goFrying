@@ -156,7 +156,7 @@
   var swiperPartner = new Swiper(".mySwiper.partnerSwiper", {
     slidesPerView: 1.5,
     spaceBetween: 30,
-    speed: 16000,
+    speed: 15000,
     direction: "horizontal",
     loop: true,
     autoplay: {
