@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<!--<html lang="ar" dir="rtl">-->
+
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8">
+    <title>Go Frying</title>
+    <meta name="description" content="">
+    <!-- responsive tag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" href="assets/image/fav/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/image/fav/fav.png">
+    <!-- bootstrap v5.3.3 css -->
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.rtl.min.css"> -->
+    <!-- AOS animation css -->
+    <link rel="stylesheet" type="text/css" href="assets/AOS/aos.css">
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Swiper Slider css -->
+    <link rel="stylesheet" type="text/css" href="assets/swiper/css/swiper-bundle.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="assets/sass/general.css">
+    <script src="assets/js/gsap.min.js"></script>
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="vertical">
+    <div id="preloader-background">
+        <div id="circle-loader"></div>
+        <img id="centre-logo" src="assets/image/logo/logo.svg" alt="logo" />
+    </div>
+    <!-- ============================================================== -->
+    <!-- Header -->
+    <!-- ============================================================== -->
+    <header data-lenis-prevent class="header" id="header">
+        <nav class="navbar container">
+            <section class="navbar__left">
+                <a href="#" class="brand">
+                    <img src="assets/image/logo/logo.svg" alt="brand" />
+                </a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+            </section>
+            <section class="navbar__center">
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <div class="menu__header">
+                        <span class="menu__arrow"><i class="fa fa-chevron-left"></i></span>
+                        <span class="menu__title"></span>
+                    </div>
+                    <ul class="menu__inner">
+                        <li class="menu__item position-relative"><a href="index.html" class="menu__link active">
+                                Home </a>
+                        </li>
+                        <!---->
+                        <li class="menu__item"><a href="product.html" class="menu__link">Products</a></li>
+                        <!---->
+                        <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
+                        <!---->
+                        <li class="menu__item"><a href="blog.html" class="menu__link">Blog</a></li>
+                        <!---->
+                        <li class="menu__item">
+                            <a href="contact.html" class="menu__link">Contact</a>
+                        </li>
+                        <!---->
+                        <li class="menu__item">
+                            <a href="quote.html" class="menu__link mobile-screen">
+                                get quote
+                            </a>
+                        </li>
+                        <!---->
+                        <li class="menu__item">
+                            <a href="#" class="menu__link mobile-screen">
+                                En
+                                <img src="assets/image/icon/lang.svg" alt="icon" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="navbar__right">
+                <a href="quote.html" class="btn btn-dark d-flex align-items-center justify-content-center">get quote</a>
+                <a href="#" class="btn btn-language d-flex gap-2 align-items-center">
+                    <img src="assets/image/icon/lang.svg" alt="icon" />
+                    <span>En</span>
+                </a>
+            </section>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- intro single page -->
+    <!-- ============================================================== -->
+    <section class="intro-single-page d-flex flex-column align-items-center justify-content-center">
+        <div class="container">
+            <div class="intro-single-page-title text-center">
+                <h2>Request quote</h2>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================== -->
+    <!--contact pages-->
+    <!-- ============================================================== -->
+    <section class="quote-section">
+        <div class="container">
+            <h3>Request a Quote</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur. Elit gravida in aliquet cras neque. Faucibus congue in sed rutrum diam. Eget platea sed netus at eget risus. Lacus dictumst a nec libero. Odio venenatis eros cursus aliquam odio aenean proin semper. Justo in natoque eros pellentesque velit velit integer. Nunc laoreet rhoncus mauris lacinia facilisis. Pharetra neque auctor facilisis volutpat cum amet et. Odio posuere nec tincidunt a pellentesque proin semper. Tempus ac in id lectus. Duis venenatis volutpat velit massa pretium a risus. Sit viverra mauris semper fames. In odio amet tellus eu. A pellentesque aliquam at lectus tortor. Id amet tellus tincidunt est aliquam. Libero mi dignissim sit dolor mauris in. Enim malesuada vitae nunc ante arcu rutrum integer elementum.
+            </p>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-9 col-md-11 col-sm-12">
+                    <h5 class="text-center">Request a Quote</h5>
+                    <div class="form-item">
+                        <input type="text" class="form-control is-invalid d-flex align-items-center" placeholder="Contact name *">
+                        <div  class="invalid-feedback">
+                            Please select a valid state.
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="form-control  d-flex align-items-center" placeholder="Contact name *">
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="form-control  d-flex align-items-center" placeholder="Contact name *">
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="form-control d-flex align-items-center" placeholder="Contact name *">
+                    </div>
+                    <div class="form-item">
+                        <select class="form-control d-flex align-items-center">
+                            <option>Default select</option>
+                            <option>Default select</option>
+                            <option>Default select</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <textarea class="form-control" placeholder="Your Message"  rows="6"></textarea>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="btn btn-send d-flex align-items-center justify-content-center">Send message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================== -->
+    <!-- Subscribe Section-->
+    <!-- ============================================================== -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="row align-items-center row-gap-3">
+                <div class="col-lg-7 col-md-12">
+                    <div class="subscribe-section-info d-flex flex-wrap align-items-center">
+                        <img src="assets/image/icon/subscribe.svg" alt="icon">
+                        <div>
+                            <p>Join our newsletter and get offers</p>
+                            <span class="d-block">Sign up our newsletter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 d-flex align-items-end flex-column">
+                    <div class="input-group  mb-0">
+                        <input type="text" class="form-control text-center" placeholder="Enter your email">
+                        <button class="btn btn-primary" type="button" id="button-addon2">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================== -->
+    <!-- Footer -->
+    <!-- ============================================================== -->
+    <footer>
+        <div class="container">
+            <div class="row footer-col row-gap-4">
+                <div class="col-lg-3">
+                    <div class="footer-logo">
+                        <a href="index.html" class="d-block brand mb-3">
+                            <img src="assets/image/logo/logo.svg" alt="logo" />
+                        </a>
+                        <p>
+                            Professional kitchen equipment for restaurants and food service businesses.
+                        </p>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-lg-3 col-6 d-flex footer-col-links">
+                    <div class="footer-links">
+                        <h5 class="footer-subtitle">Products</h5>
+                        <ul class="d-flex flex-column">
+                            <li>
+                                <a href="#">Cooking Equipment</a>
+                            </li>
+                            <li>
+                                <a href="#">Refrigeration</a>
+                            </li>
+                            <li>
+                                <a href="#">Food Prep</a>
+                            </li>
+                            <li>
+                                <a href="#">Storage</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-lg-3 col-6 d-flex footer-col-links">
+                    <div class="footer-links">
+                        <h5 class="footer-subtitle">Company</h5>
+                        <ul>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Shipping</a>
+                            </li>
+                            <li>
+                                <a href="#">Returns</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-lg-3">
+                    <div class="footer-contat">
+                        <h5 class="footer-subtitle">Contact</h5>
+                        <div class="item d-flex align-items-center gap-2">
+                            <img src="assets/image/icon/location.svg" alt="icon" />
+                            <span>1234 kitchen street qatar doha</span>
+                        </div>
+                        <div class="item d-flex align-items-center gap-2">
+                            <img src="assets/image/icon/mail.svg" alt="icon" />
+                            <a href="#">Gofly@goly.com</a>
+                        </div>
+                        <div class="item d-flex align-items-center gap-2">
+                            <img src="assets/image/icon/phone-call.svg" alt="icon" />
+                            <a href="#">+00236 21512 523</a>
+                        </div>
+                        <ul class="d-flex align-items-center gap-3">
+                            <li>
+                                <a href="#">
+                                    <img src="assets/image/icon/facebook.svg" alt="icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/image/icon/youtube.svg" alt="icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="assets/image/icon/instagram.svg" alt="icon" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================== -->
+    <!-- back-to-top -->
+    <!-- ============================================================== -->
+    <button class="back-to-top" type="button"></button>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!--JQuery Js-->
+    <script src="assets/jq/jQuery.js"></script>
+    <!-- AOS JS -->
+    <script src="assets/AOS/aos.js"></script>
+    <!--ScrollTrigger-->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!--lenis-->
+    <script src="assets/js/lenis.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/script_lenis.js"></script>
+    <!-- Swiper JS -->
+    <script src="assets/swiper/js/swiper.min.js"></script>
+    <!--Main Js-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

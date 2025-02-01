@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="ltr">
 <!--<html lang="ar" dir="rtl">-->
-
 <head>
     <!-- meta tag -->
     <meta charset="utf-8">
@@ -30,7 +29,6 @@
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body id="vertical">
     <div id="preloader-background">
         <div id="circle-loader"></div>
@@ -65,12 +63,18 @@
                         <!---->
                         <li class="menu__item"><a href="product.html" class="menu__link">Products</a></li>
                         <!---->
-                        <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+                        <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
                         <!---->
-                        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+                        <li class="menu__item"><a href="blog.html" class="menu__link">Blog</a></li>
                         <!---->
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Contact</a>
+                            <a href="contact.html" class="menu__link">Contact</a>
+                        </li>
+                        <!---->
+                        <li class="menu__item">
+                            <a href="quote.html" class="menu__link mobile-screen">
+                                get quote
+                            </a>
                         </li>
                         <!---->
                         <li class="menu__item">
@@ -83,7 +87,7 @@
                 </div>
             </section>
             <section class="navbar__right">
-                <a href="#" class="btn btn-dark d-flex align-items-center justify-content-center">get quote</a>
+                <a href="quote.html" class="btn btn-dark d-flex align-items-center justify-content-center">get quote</a>
                 <a href="#" class="btn btn-language d-flex gap-2 align-items-center">
                     <img src="assets/image/icon/lang.svg" alt="icon" />
                     <span>En</span>
@@ -385,7 +389,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-md-10 col-sm-12">
-                    <div class="text-center d-flex align-items-center justify-content-center flex-column row-gap-4">
+                    <div class="text-center d-flex align-items-center justify-content-center flex-column row-gap-4" data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom">
                         <h3>Ready to Equip Your Kitchen?</h3>
                         <p>
                             Contact us for a free consultation and quote
@@ -515,7 +520,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="news-card overflow-hidden">
                         <div class="news-card-header overflow-hidden">
-                            <img class="img-fluid w-100 h-100" src="assets/image/news/news-1.png" alt="img" />
+                            <div class='container_sec'>
+                                <div class='reveal'>
+                                    <img class="img-fluid w-100 h-100" src="assets/image/news/news-1.png" alt="img" />
+                                </div>
+                            </div>
                         </div>
                         <div class="news-card-body">
                             <ul class="d-flex flex-wrap align-items-center gap-4 row-gap-3">
@@ -537,7 +546,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="news-card overflow-hidden">
                         <div class="news-card-header overflow-hidden">
-                            <img class="img-fluid w-100 h-100" src="assets/image/news/news-2.png" alt="img" />
+                            <div class='container_sec'>
+                                <div class='reveal'>
+                                    <img class="img-fluid w-100 h-100" src="assets/image/news/news-2.png" alt="img" />
+                                </div>
+                            </div>
                         </div>
                         <div class="news-card-body">
                             <ul class="d-flex flex-wrap align-items-center gap-4 row-gap-3">
@@ -559,7 +572,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="news-card overflow-hidden">
                         <div class="news-card-header overflow-hidden">
-                            <img class="img-fluid w-100 h-100" src="assets/image/news/news-1.png" alt="img" />
+                            <div class='container_sec'>
+                                <div class='reveal'>
+                                    <img class="img-fluid w-100 h-100" src="assets/image/news/news-1.png" alt="img" />
+                                </div>
+                            </div>
                         </div>
                         <div class="news-card-body">
                             <ul class="d-flex flex-wrap align-items-center gap-4 row-gap-3">
@@ -587,7 +604,8 @@
     <section class="equipment-section d-flex align-items-center justify-content-center"
         style="background-image: url(assets/image/banner/equipment.png);">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
                 <div class="col-lg-11 col-md-12 col-sm-12">
                     <p class="text-center">Equipment That Makes the Difference</p>
                 </div>
@@ -696,7 +714,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-12 d-flex align-items-end">
+                <div class="col-lg-5 col-md-12 d-flex align-items-end  flex-column">
                     <div class="input-group mb-0">
                         <input type="text" class="form-control text-center" placeholder="Enter your email">
                         <button class="btn btn-primary" type="button" id="button-addon2">SUBSCRIBE</button>
