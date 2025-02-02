@@ -67,6 +67,7 @@
   var swiperFade = new Swiper(".swiperFade", {
     effect: "fade",
     loop: true,
+    autoplay:true,
     speed: 1000,
     navigation: {
       nextEl: ".swiper-button-next",

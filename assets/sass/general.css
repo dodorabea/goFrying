@@ -1441,6 +1441,22 @@ footer .footer-col .footer-contat .item:not(:last-child) {
 /*-----------------------
     best-seller
 -------------------------*/
+html[dir=rtl] .swiper-button-prev, html[dir=rtl] .swiper-rtl .swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 16px);
+  left: auto;
+}
+html[dir=rtl] .swiper-button-next, html[dir=rtl] .swiper-rtl .swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 16px);
+  right: auto;
+}
+
+html[dir=ltr] .swiper-button-prev, html[dir=ltr] .swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, 16px);
+}
+html[dir=ltr] .swiper-button-next, html[dir=ltr] .swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 16px);
+}
+
 .best-seller {
   padding: 70px 0;
 }
@@ -1467,12 +1483,6 @@ footer .footer-col .footer-contat .item:not(:last-child) {
 }
 .best-seller-card:hover .with-hover {
   opacity: 1;
-}
-.best-seller-card .swiper-button-prev, .best-seller-card .swiper-rtl .swiper-button-next {
-  left: var(--swiper-navigation-sides-offset, 16px);
-}
-.best-seller-card .swiper-button-next, .best-seller-card .swiper-rtl .swiper-button-prev {
-  right: var(--swiper-navigation-sides-offset, 16px);
 }
 .best-seller-card .footer-part {
   padding: 1rem 1.5rem;
@@ -2158,6 +2168,7 @@ html[dir=ltr] .founder-section .founder-image img {
 @media (max-width: 767.98px) {
   .offers-banner {
     min-height: 30rem;
+    display: none !important;
   }
 }
 .offers-banner p {
